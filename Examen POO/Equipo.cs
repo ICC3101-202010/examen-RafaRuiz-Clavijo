@@ -25,6 +25,14 @@ namespace Examen_POO
             {
                 this.Players = players;
             }
+            else
+            {
+                this.Players = new List<Jugadores>();
+                for (int i = 0; i < 15; i++)
+                {
+                    this.Players.Add(players[i]);
+                }
+            }
             this.Entrenador = entrenador;
             this.Medico = medico;
             foreach(Jugadores data in players)
