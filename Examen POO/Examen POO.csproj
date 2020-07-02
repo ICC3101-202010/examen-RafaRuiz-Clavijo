@@ -47,6 +47,7 @@
     <Compile Include="CanJugarArco.cs" />
     <Compile Include="Entrenador.cs" />
     <Compile Include="Equipo.cs" />
+    <Compile Include="HelpThePlayerEventArgs.cs" />
     <Compile Include="Jugadores.cs" />
     <Compile Include="Medico.cs" />
     <Compile Include="Persona.cs" />

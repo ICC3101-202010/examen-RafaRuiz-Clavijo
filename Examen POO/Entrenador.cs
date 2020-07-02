@@ -10,6 +10,9 @@ namespace Examen_POO
     {
         private int puntos_tactica;
 
+        public delegate void NotificarPartidoLesionEventHandler(object source, HelpThePlayerEventArgs e);
+        public event NotificarPartidoLesionEventHandler NotificarEmergencia;
+
         public Entrenador(string name, int edad, string nacion, int sueldo, int puntos_tactica)
             : base(name, edad, nacion, sueldo)
         {
@@ -18,9 +21,20 @@ namespace Examen_POO
 
         public int Puntos_tactica { get => puntos_tactica; set => puntos_tactica = value; }
 
-        public void Cambiar_Jugador(List<Jugadores> mis_jugadores, List<Jugadores> en_cancha)
+        public void Cambiar_Jugador(Jugadores cambiar)
         {
+            //Se cambia al jugador
+        }
 
+        public void Notificar_Lesion(object source, HelpThePlayerEventArgs e)
+        {
+            //Ver si se puede hacer eventos
+            if(NotificarEmergencia != null)
+            {
+                NotificarEmergencia(this, new HelpThePlayerEventArgs() { player = e.player });
+                Cambiar_Jugador(e.player); //REVISAR
+
+            }
         }
     }
 }

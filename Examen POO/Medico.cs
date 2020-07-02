@@ -21,12 +21,16 @@ namespace Examen_POO
         public bool Evaluar(Jugadores jugador)
         {
             //Ver si se puede plantear de otra forma
-            return true;
+            if (jugador.Lesionado)
+            {
+                Curar(jugador);
+            }
+            return jugador.Lesionado;
         }
 
         public void Curar(Jugadores jugador)
         {
-
+            jugador.Lesionado = false;
         }
     }
 }
