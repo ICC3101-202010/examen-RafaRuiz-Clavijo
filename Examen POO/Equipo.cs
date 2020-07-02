@@ -27,6 +27,10 @@ namespace Examen_POO
             }
             this.Entrenador = entrenador;
             this.Medico = medico;
+            foreach(Jugadores data in players)
+            {
+                data.NotificarLesion += entrenador.OnNotificar_Lesion; //Suscribo a cada evento del jugador al metodo de su entrenador
+            }
             equipo_valido = Verificar_Jugadores(); //Verifica en el caso de que el equipo es nacional si sus jugadores son del mismo pais
         }
 
@@ -35,6 +39,10 @@ namespace Examen_POO
         public List<Jugadores> Players { get => players; set => players = value; }
         public Entrenador Entrenador { get => entrenador; set => entrenador = value; }
         public Medico Medico { get => medico; set => medico = value; }
+
+        //Teniendo las propiedades se pueden agregar jugadores con Players.Add();
+        //Se puede instanciar Entrenador como newTeam.Entrenador = new Entrenador -> Igualmente se puede por constructor
+        //Lo mismo con medico
 
         public bool Verificar_Jugadores()
         {
@@ -50,5 +58,21 @@ namespace Examen_POO
             }
             return true;
         }
+
+        public List<string> Info_Equipo()
+        {
+            List<string> mi_equipo = new List<string>();
+            mi_equipo.Add(Name);
+            mi_equipo.Add(Convert.ToString(Nacional));
+            mi_equipo.Add(Entrenador.Nombre);
+            mi_equipo.Add(Medico.Nombre);
+            foreach(Jugadores data in players)
+            {
+                mi_equipo.Add(data.Nombre);
+            }
+            return mi_equipo;
+        }
+
+
     }
 }

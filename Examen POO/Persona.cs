@@ -8,8 +8,8 @@ namespace Examen_POO
 {
     public class Persona
     {
-        private string nombre;
-        private int edad;
+        protected string nombre;
+        protected int edad;
         private string nacion;
         private int sueldo;
 

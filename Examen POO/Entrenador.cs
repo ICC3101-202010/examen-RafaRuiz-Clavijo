@@ -17,6 +17,7 @@ namespace Examen_POO
             : base(name, edad, nacion, sueldo)
         {
             this.Puntos_tactica = puntos_tactica;
+            
         }
 
         public int Puntos_tactica { get => puntos_tactica; set => puntos_tactica = value; }
@@ -26,13 +27,13 @@ namespace Examen_POO
             //Se cambia al jugador
         }
 
-        public void Notificar_Lesion(object source, HelpThePlayerEventArgs e)
+        public void OnNotificar_Lesion(object source, HelpThePlayerEventArgs e)
         {
             //Ver si se puede hacer eventos
             if(NotificarEmergencia != null)
             {
                 NotificarEmergencia(this, new HelpThePlayerEventArgs() { player = e.player });
-                Cambiar_Jugador(e.player); //REVISAR
+                Cambiar_Jugador(e.player);
 
             }
         }

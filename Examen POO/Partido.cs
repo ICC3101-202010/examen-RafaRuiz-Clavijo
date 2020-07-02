@@ -25,10 +25,7 @@ namespace Examen_POO
             if (Verificar_Validez())
             {
                 this.Nacional = Local.Nacional;
-                if (Nacional)
-                {
 
-                }
             }
             this.Local.Entrenador.NotificarEmergencia += OnNotifyLesion;
             this.Visita.Entrenador.NotificarEmergencia += OnNotifyLesion;

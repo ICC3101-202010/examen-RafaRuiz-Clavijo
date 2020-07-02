@@ -8,11 +8,11 @@ namespace Examen_POO
 {
     public class Jugadores : Persona
     {
-        private int puntos_ataque;
-        private int puntos_defensa;
-        private int numero_camiseta;
+        protected int puntos_ataque;
+        protected int puntos_defensa;
+        protected int numero_camiseta;
 
-        private bool lesionado;
+        protected bool lesionado;
 
         public delegate void HelpThePlayerEventHandler(object source, HelpThePlayerEventArgs args);
         public event HelpThePlayerEventHandler NotificarLesion;
@@ -30,6 +30,11 @@ namespace Examen_POO
         public int Puntos_defensa { get => puntos_defensa; set => puntos_defensa = value; }
         public int Numero_camiseta { get => numero_camiseta; set => numero_camiseta = value; }
         public bool Lesionado { get => lesionado; set => lesionado = value; }
+
+        public void Jugar_Cancha()
+        {
+
+        }
 
         public void Avisar_Lesion()
         {
