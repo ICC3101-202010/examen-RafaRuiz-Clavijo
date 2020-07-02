@@ -53,6 +53,21 @@ namespace Examen_POO
             {
                 Console.WriteLine("El partido no es valido, no puede enfrentarse un equipo nacional con un equipo de liga");
             }
+            else
+            {
+                if (Local.Verificar_Jugadores())
+                {
+                    Console.WriteLine("El equipo local tiene miembros que no son de su nacion");
+                }
+                else if (Visita.Verificar_Jugadores())
+                {
+                    Console.WriteLine("El equipo visitante tiene miembros que no son de su nacion");
+                }
+                else
+                {
+                    Console.WriteLine("El partido se juega");
+                }
+            }
         }
         public void OnNotifyLesion(object source, HelpThePlayerEventArgs e)
         {
