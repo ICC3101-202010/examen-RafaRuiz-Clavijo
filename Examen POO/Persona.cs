@@ -30,5 +30,7 @@ namespace Examen_POO
         {
             return new List<string>() { Nombre, Convert.ToString(Edad), Nacion, Convert.ToString(Sueldo) };
         }
+
+        //Se puede obtener la info gracias al metodo o a las propiedades
     }
 }

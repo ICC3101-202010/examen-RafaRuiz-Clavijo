@@ -20,11 +20,6 @@ namespace Examen_POO
 
         public bool Evaluar(Jugadores jugador)
         {
-            //Ver si se puede plantear de otra forma
-            if (jugador.Lesionado)
-            {
-                Curar(jugador);
-            }
             return jugador.Lesionado;
         }
 

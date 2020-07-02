@@ -21,7 +21,7 @@ namespace Examen_POO
         {
             this.Name = name;
             this.Nacional = nacional;
-            if (players.Count() == 15) //Verifiquemos que el equipo sean de 15 jugadores
+            if (players.Count() <= 15) //Verifiquemos que el equipo no pasen de de 15 jugadores
             {
                 this.Players = players;
             }
@@ -52,6 +52,7 @@ namespace Examen_POO
                 {
                     if (players[i].Nacion != players[(i + 1) % players.Count()].Nacion)
                     {
+                        Console.WriteLine("El jugador " + players[(i + 1) % players.Count()].Nombre + " no es de la nacion " + players[i].Nacion);
                         return false;
                     }
                 }
@@ -68,7 +69,7 @@ namespace Examen_POO
             mi_equipo.Add(Medico.Nombre);
             foreach(Jugadores data in players)
             {
-                mi_equipo.Add(data.Nombre);
+                mi_equipo.Add("Nombre: " + data.Nombre + " Numero: " + data.Numero_camiseta);
             }
             return mi_equipo;
         }

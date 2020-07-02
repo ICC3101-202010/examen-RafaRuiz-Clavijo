@@ -29,7 +29,7 @@ namespace Examen_POO
 
         public void OnNotificar_Lesion(object source, HelpThePlayerEventArgs e)
         {
-            //Ver si se puede hacer eventos
+            //Una vez recibe el llamado del jugador lesionado, este notificara al partido
             if(NotificarEmergencia != null)
             {
                 NotificarEmergencia(this, new HelpThePlayerEventArgs() { player = e.player });
