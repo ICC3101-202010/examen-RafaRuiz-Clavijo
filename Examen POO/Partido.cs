@@ -47,6 +47,7 @@ namespace Examen_POO
         {
             return new List<string>() { Local.Name, Visita.Name, Convert.ToString(Tiempo), Convert.ToString(Score_local), Convert.ToString(Score_visita), Convert.ToString(Nacional) };
         }
+        //Igualmente se puede entregar la info por las propiedades
         public void Simular_Partido()
         {
             if (!Verificar_Validez())
@@ -55,11 +56,11 @@ namespace Examen_POO
             }
             else
             {
-                if (Local.Verificar_Jugadores())
+                if (!Local.Verificar_Jugadores())
                 {
                     Console.WriteLine("El equipo local tiene miembros que no son de su nacion");
                 }
-                else if (Visita.Verificar_Jugadores())
+                else if (!Visita.Verificar_Jugadores())
                 {
                     Console.WriteLine("El equipo visitante tiene miembros que no son de su nacion");
                 }

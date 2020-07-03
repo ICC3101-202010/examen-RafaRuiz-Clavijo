@@ -16,7 +16,7 @@ namespace Examen_POO
 
         public void Jugar_al_Arco()
         {
-
+            //Metodo que permite jugar en el arco
         }
     }
 }

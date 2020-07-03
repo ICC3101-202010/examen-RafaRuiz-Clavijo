@@ -82,6 +82,8 @@ namespace Examen_POO
             return mi_equipo;
         }
 
+        //Explicado anteriormente igual es posible obtener obtener su info gracias a las propiedades
+
 
     }
 }

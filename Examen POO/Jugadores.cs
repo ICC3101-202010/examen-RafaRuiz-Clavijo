@@ -33,7 +33,7 @@ namespace Examen_POO
 
         public void Jugar_Cancha()
         {
-
+            //Metodo en el que el jugador juega en la cancha
         }
 
         public void Avisar_Lesion()
@@ -43,7 +43,5 @@ namespace Examen_POO
                 NotificarLesion(this, new HelpThePlayerEventArgs() { player = this });
             }
         }
-
-
     }
 }
